@@ -1,13 +1,13 @@
 # For more information, please refer to https://aka.ms/vscode-docker-python
 FROM python:3.8-buster
 
-EXPOSE 3000
+EXPOSE 8080
 
 WORKDIR /app
 ADD . /app
 ENV DEBUG=False
 ENV HOST=0.0.0.0
-ENV PORT=3000
+ENV PORT=8080
 
 ENV APP_LANG=en
 ENV X_API_KEY=123qwe
