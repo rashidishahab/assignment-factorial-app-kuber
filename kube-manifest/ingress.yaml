@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: factorialapp
+  namespace: factorial
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+  labels:
+    name: factorialapp
+spec:
+  rules:
+  - host: factorial.myloop.tech
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: factorialapp
+            port: 
+              number: 80

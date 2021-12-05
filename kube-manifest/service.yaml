@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: factorialapp
+  namespace: factorial
+spec:
+  selector:
+    app: factorialapp
+  ports:
+  - port: 80
+    targetPort: 8080

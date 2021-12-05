@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: factorialapp
+  namespace: factorial
+spec:
+  selector:
+    matchLabels:
+      app: factorialapp
+  template:
+    metadata:
+      labels:
+        app: factorialapp
+    spec:
+      containers:
+      - name: factorialapp
+        image: public.ecr.aws/k2g6v2a6/factorialapprepo:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080
