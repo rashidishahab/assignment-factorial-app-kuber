@@ -19,7 +19,7 @@ RUN python3 -m pip install gunicorn
 RUN python3 -m pip install -r requirements.txt
 
 # Change Timezone to Asia Tehran
-ENV TZ=Asia/Tehran
+ENV TZ=Europe/Istanbul
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # Disable CipherString in OPENSSL Config
