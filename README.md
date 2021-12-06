@@ -4,9 +4,9 @@
 Application container deployed to AWS EKS in region us-eats-2 from the image which has been saved in ECR as public repository in us-east-1 region.</br>
 The creation of the public container has been done via aws panel GUI and the docker image pushed build and pushed via Cloud9.</br>
 
-According to my previous experiences with EKS/Kubernets as well, you can share an ENI between multiple pods and place more pods per instance.</br> In addition to above, in terms of portability, you are locked into Amazon infrastructure and not able to move your cluster to othe cloud provider since the EKS is based on Kubernetes you can move and run your cluster in any other kubernetes environments. 
+According to my previous experiences with Kubernetes and as  you can share an ENI between multiple pods and place more pods per instance and in terms of portability, you are locked into Amazon infrastructure with ECS and not able to move your cluster to other cloud provider since the EKS is based on Kubernetes you can move and run your cluster in any other kubernetes environments. I decided to use EKS on top.
 
-In addition to above, because of below advantages in compare of ECS and fargate (Serverless solution) I decided to deploye over aws eks and create cluster: 
+In addition to above, because of below advantages in compare of ECS and fargate (Serverless solution) I decided to deploy over aws eks and create cluster: 
 
 * Horizontal scaling.</br>
 * Automates rollouts and rollbacks.</br>

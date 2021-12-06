@@ -6,3 +6,5 @@
 2) ingress.yaml
 3) services.yaml
 
+## for both assignment some procedures has been done manually with specific commands which mostly has been written in their readme.md files of own reporitory. 
+
