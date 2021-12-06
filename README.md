@@ -4,7 +4,7 @@
 Application container deployed to AWS EKS in region us-eats-2 from the image which has been saved in ECR as public repository in us-east-1 region.</br>
 The creation of the public container has been done via aws panel GUI and the docker image pushed build and pushed via Cloud9.</br>
 
-According to my previous experiences with Kubernetes and as  you can share an ENI between multiple pods and place more pods per instance and in terms of portability, you are locked into Amazon infrastructure with ECS and not able to move your cluster to other cloud provider since the EKS is based on Kubernetes you can move and run your cluster in any other kubernetes environments. I decided to use EKS on top.
+According to my previous experiences with Kubernetes which is most powerfull platform for this purpose and in compare with ECS , ECS limitted in configuration option and as  you can share an ENI between multiple pods and place more pods per instance and in terms of portability you are locked into Amazon infrastructure with ECS and not able to move your cluster to other cloud provider since the EKS is based on Kubernetes you can move and run your cluster in any other kubernetes environments. I decided to use EKS on top.
 
 In addition to above, because of below advantages in compare of ECS and fargate (Serverless solution) I decided to deploy over aws eks and create cluster: 
 
@@ -12,6 +12,11 @@ In addition to above, because of below advantages in compare of ECS and fargate 
 * Automates rollouts and rollbacks.</br>
 * Kubernetes where to deploye the container as best location</br>
 * Scale resources and applications in real time</br>
+* EKS uses VPC networking which is easy to manage</b>
+* ability to use public and private container. </b>
+
+
+
 
 # Service Mesh
 I have used Kubernetes service mesh to manange and secure traffic between --> Ref: https://istio.io/ </br> Also 
